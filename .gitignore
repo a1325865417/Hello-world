@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float faHeight,moHeight,Height;
+    char sex,sports,diet;
+    printf("Input sex (male input M,girls input F):");
+    sex = getchar();
+
+
+    if(sex=='M')
+    {
+        printf("Input sports (like input Y,dislike input N):");
+        getchar();
+        sports=getchar();
+
+        if(sports=='Y')
+        {
+            printf("Input diet (good diet input Y,bad diet input N):");
+            getchar();
+            diet = getchar();
+            if(diet=='Y')
+            {
+                    printf("Input faHeight , moHeight:");
+                    scanf("%f,%f",&faHeight,&moHeight);
+                    Height=(faHeight+moHeight)*0.54*(1+0.02+0.015);
+                    printf("Height=%f\n",Height);
+
+            }
+            else
+            {
+                printf("Input faHeight , moHeight:");
+                scanf("%f,%f",&faHeight,&moHeight);
+                Height=(faHeight+moHeight)*0.54*(1+0.02);
+                printf("Height=%f\n",Height);
+            }
+        }
+        else
+        {
+            printf("Input diet (good diet input Y,bad diet input N):");
+            getchar();
+            diet = getchar();
+            if(diet=='Y')
+            {
+                    printf("Input faHeight , moHeight:");
+                    scanf("%f,%f",&faHeight,&moHeight);
+                    Height=(faHeight+moHeight)*0.54*(1+0.015);
+                    printf("Height=%f\n",Height);
+
+            }
+            else
+            {
+                printf("Input faHeight , moHeight:");
+                scanf("%f,%f",&faHeight,&moHeight);
+                Height=(faHeight+moHeight)*0.54;
+                printf("Height=%f\n",Height);
+            }
+        }
+    }
+    else
+    {
+        printf("Input sports (like input Y,dislike input N):");
+        getchar();
+        sports=getchar();
+
+        if(sports=='Y')
+        {
+            printf("Input diet (good diet input Y,bad diet input N):");
+            getchar();
+            diet = getchar();
+            if(diet=='Y')
+            {
+                    printf("Input faHeight , moHeight:");
+                    scanf("%f,%f",&faHeight,&moHeight);
+                    Height=((faHeight*0.923+moHeight)/2)*(1+0.02+0.015);
+                    printf("Height=%f\n",Height);
+
+            }
+            else
+            {
+                printf("Input faHeight , moHeight:");
+                scanf("%f,%f",&faHeight,&moHeight);
+                Height=((faHeight*0.923+moHeight)/2)*(1+0.02);
+                printf("Height=%f\n",Height);
+            }
+        }
+         else
+        {
+            printf("Input diet (good diet input Y,bad diet input N):");
+            getchar();
+            diet = getchar();
+            if(diet=='Y')
+            {
+                    printf("Input faHeight , moHeight:");
+                    scanf("%f,%f",&faHeight,&moHeight);
+                    Height=((faHeight*0.923+moHeight)/2)*(1+0.015);
+                    printf("Height=%f\n",Height);
+
+            }
+            else
+            {
+                printf("Input faHeight , moHeight:");
+                scanf("%f,%f",&faHeight,&moHeight);
+                Height=(faHeight*0.923+moHeight)/2;
+                printf("Height=%f\n",Height);
+            }
+        }
+    }
+    return 0;
+}
